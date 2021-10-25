@@ -38,7 +38,7 @@
                         bindings = <
    &none &kp PRCNT   &kp N7 &kp N8 &kp N9  &kp PLUS    &kp PG_UP  &kp HOME      &kp UP       &kp END    &kp PSCRN  &none
    &none &kp KP_LPAR &kp N4 &kp N5 &kp N6  &kp DOT     &kp PG_DN  &kp LEFT      &kp DOWN     &kp RIGHT  &kp INS    &none
-   &none &kp KP_RPAR &KP N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none      &none
+   &none &kp KP_RPAR &kp N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none       &none
                             &trans &trans  &trans      &trans     &trans        &trans
                         >;
                 };
