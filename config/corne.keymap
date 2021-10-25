@@ -27,10 +27,10 @@
 
                 default_layer {
                         bindings = <
-   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J   &kp L          &kp U       &kp Y      &kp APOS    &none
-   &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M   &hm RSHIFT N   &hm RCTRL E &hm RALT I &hm RGUI O  &none
-   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K   &kp H          &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &kp ESC     &lt 1 TAB    &kp SPACE  &kp RET &lt 2 BSPC  &kp CARET
+   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J      &kp L          &kp U       &kp Y      &kp APOS    &none
+   &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M      &hm RSHIFT N   &hm RCTRL E &hm RALT I &hm RGUI O  &none
+   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K      &kp H          &kp COMMA   &kp DOT    &kp FSLH    &none
+                               &kp ESC     &lt 1 TAB    &kp SPACE  &lt 3 RET  &lt 2 BSPC  &kp CARET
                         >;
                 };
 
@@ -47,10 +47,27 @@
                         bindings = <
    &none &kp PRCNT   &kp N7 &kp N8 &kp N9  &kp PLUS    &kp PG_UP  &kp HOME      &kp UP       &kp END    &kp PSCRN  &none
    &none &kp KP_LPAR &kp N4 &kp N5 &kp N6  &kp DOT     &kp PG_DN  &kp LEFT      &kp DOWN     &kp RIGHT  &kp INS    &none
-   &none &kp KP_RPAR &kp N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none       &none
-                            &trans &trans  &trans      &trans     &trans        &trans
+   &none &kp KP_RPAR &kp N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none      &none
+                            &trans &kp N0  &trans      &trans     &trans        &trans
                         >;
                 };
 
+                function {
+                        bindings = <
+   &none &kp C_BRI_UP &kp N7 &kp F8 &kp F9  &kp F12    &kp PG_UP     &kp HOME      &kp UP     &kp END    &kp PSCRN    &none
+   &none &kp C_BRI_DN &kp F4 &kp F5 &kp F6  &kp F11    &kp PG_DN     &kp LEFT      &kp DOWN   &kp RIGHT  &kp INS      &none
+   &none &none        &kp F1 &kp F2 &kp F3  &kp F10    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_PP   &kp C_NEXT &kp C_PREV   &none
+                            &trans &trans  &trans      &trans        &trans        &trans
+                        >;
+                };
+
+                meta {
+                        bindings = <
+   &none &bt BT_SEL 0 &bt BT_CLR &none  &none  &none    &none  &none  &none  &none &none   &none
+   &none &bt BT_SEL 1 &none      &none  &none  &none    &none  &none  &none  &none &none   &none
+   &none &bt BT_SEL 2 &none      &none  &none  &none    &none  &none  &none  &none &none   &none
+                                 &trans &trans &trans   &trans &trans &trans
+                        >;
+                };
         };
 };
