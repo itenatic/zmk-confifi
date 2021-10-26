@@ -37,7 +37,7 @@
                 symbols {
                         bindings = <
    &none &none   &kp CARET   &kp GRAVE  &kp TILDE  &none       &none      &kp LT        &kp GT       &kp LBKT  &kp RBKT  &none
-   &none &kp AT  &kp HASH    &kp EXCL   &kp QMARK  &kp AMPS    &kp EQUAL  &kp KP_LPAR   &kp KP_LPAR  &kp LBRC  &kp RBRC  &none
+   &none &kp AT  &kp HASH    &kp EXCL   &kp QMARK  &kp AMPS    &kp EQUAL  &kp LPAR      &kp RPAR  &kp LBRC  &kp RBRC  &none
    &none &none   &none       &kp DLLR   &kp SEMI   &kp PIPE    &kp UNDER  &kp COLN      &none        &none     &none     &none
                              &trans     &trans     &trans      &trans     &trans        &trans
                         >;
