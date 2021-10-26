@@ -10,8 +10,8 @@
 #define MET 4
 
 &lt {
-  quick_tap_ms = <149>;
-  tapping-term-ms = <150>;
+  tapping-term-ms = <165>;
+  quick_tap_ms = <160>;
 };
 
 / {
