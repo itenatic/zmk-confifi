@@ -20,6 +20,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        tc: thumb_cluster {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEAT_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick_tap_ms = <140>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -29,7 +39,7 @@
    &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
    &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O  &none
    &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &lt MET ESC &lt SYM TAB  &lt SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
+                               &tc MET ESC &tc SYM TAB  &kp SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
                         >;
                 };
 
@@ -74,7 +84,7 @@
    &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
    &none &kp A      &kp R      &kp S       &hm T        &kp G      &kp M       &kp N         &kp E       &kp I      &kp O       &none
    &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &tc MET ESC &tc SYM TAB  &tc SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
+                               &tc MET ESC &tc SYM TAB  &kp SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
                         >;
                 };
 
