@@ -8,6 +8,11 @@
 #define FUN 3
 #define MET 4
 
+&lt {
+  quick_tap_ms = <140>;
+  tapping-term-ms = <180>;
+};
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -16,15 +21,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        tc: thumb_cluster {
-            compatible = "zmk,behavior-layer-tap";
-            label = "THUMB_CLUSTER";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick_tap_ms = <140>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -37,7 +33,7 @@
    &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
    &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O  &none
    &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &tc MET ESC &tc SYM TAB  &kp SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
+                               &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
                         >;
                 };
 
