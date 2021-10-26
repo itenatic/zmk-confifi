@@ -10,8 +10,8 @@
 #define MET 4
 
 &lt {
-  quick_tap_ms = <140>;
-  tapping-term-ms = <180>;
+  quick_tap_ms = <149>;
+  tapping-term-ms = <150>;
 };
 
 / {
@@ -21,7 +21,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <149>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
