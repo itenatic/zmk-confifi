@@ -2,6 +2,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 0
+#define SYM 1
+#define NAV 2
+#define FUN 3
+#define MET 4
+#define TES 5
 
 / {
     behaviors {
@@ -15,7 +21,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        rt: homerow_mods {
+        tc: thumb_cluster {
             compatible = "zmk,behavior-hold-tap";
             label = "REPEAT_TAP";
             #binding-cells = <2>;
@@ -30,10 +36,10 @@
 
                 default_layer {
                         bindings = <
-   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J      &kp L          &kp U       &kp Y      &kp APOS    &none
-   &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M      &hm RSHIFT N   &hm RCTRL E &hm RALT I &hm RGUI O  &none
-   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K      &kp H          &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &lt 4 ESC   &rt 1 TAB    &rt SPACE  &rt 3 RET  &rt 2 BSPC  &kp CARET
+   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
+   &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O  &none
+   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
+                               &tc MET ESC &tc SYM TAB  &tc SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
                         >;
                 };
 
@@ -66,11 +72,21 @@
 
                 meta {
                         bindings = <
-   &none &bt BT_SEL 0 &bt BT_CLR &none  &none  &none    &none  &none  &none  &none &none   &none
-   &none &bt BT_SEL 1 &none      &none  &none  &none    &none  &none  &none  &none &none   &none
-   &none &bt BT_SEL 2 &none      &none  &none  &none    &none  &none  &none  &none &none   &none
-                                 &trans &trans &trans   &trans &trans &trans
+   &none &bt BT_SEL 0 &bt BT_CLR &none  &to TES &none    &none  &none  &none  &none &none   &none
+   &none &bt BT_SEL 1 &none      &none  &none   &none    &none  &none  &none  &none &none   &none
+   &none &bt BT_SEL 2 &none      &none  &none   &none    &none  &none  &none  &none &none   &none
+                                 &trans &trans  &trans   &trans &trans &trans
                         >;
                 };
+
+                test {
+                        bindings = <
+   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
+   &none &kp A      &kp R      &kp S       &hm T        &kp G      &kp M       &kp N         &kp E       &kp I      &kp O       &none
+   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
+                               &tc MET ESC &tc SYM TAB  &tc SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
+                        >;
+                };
+
         };
 };
