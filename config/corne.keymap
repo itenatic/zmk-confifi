@@ -7,7 +7,6 @@
 #define NAV 2
 #define FUN 3
 #define MET 4
-#define TES 5
 
 / {
     behaviors {
@@ -76,15 +75,6 @@
    &none &bt BT_SEL 1 &none      &none  &none   &none    &none  &none  &none  &none &none   &none
    &none &bt BT_SEL 2 &none      &none  &none   &none    &none  &none  &none  &none &none   &none
                                  &trans &trans  &trans   &trans &trans &trans
-                        >;
-                };
-
-                test {
-                        bindings = <
-   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
-   &none &kp A      &kp R      &kp S       &hm T        &kp G      &kp M       &kp N         &kp E       &kp I      &kp O       &none
-   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &tc MET ESC &tc SYM TAB  &kp SPACE  &tc FUN RET &tc NAV BSPC  &kp CARET
                         >;
                 };
 
