@@ -38,7 +38,7 @@
                              &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
       >;
     };
-:wq
+
     symbols {
       bindings = <
  &none &none   &kp CARET   &kp GRAVE  &kp TILDE  &none       &none      &kp LT        &kp GT       &kp LBKT  &kp RBKT  &none
