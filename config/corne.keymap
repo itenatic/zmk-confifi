@@ -75,14 +75,5 @@
       >;
     };
 
-    locked {
-      bindings = <
- &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
- &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
- &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
-                   &none  &none  &none      &none  &none  &tog DEF
-      >;
-    };
-
   };
 };
