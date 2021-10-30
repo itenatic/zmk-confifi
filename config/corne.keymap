@@ -8,6 +8,7 @@
 #define NAV 2
 #define FUN 3
 #define MET 4
+#define LOK 5
 
 &lt {
   tapping-term-ms = <165>;
@@ -15,64 +16,73 @@
 };
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <149>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick_tap_ms = <149>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
     };
-        keymap {
-                compatible = "zmk,keymap";
+  };
+  keymap {
+    compatible = "zmk,keymap";
 
-                default_layer {
-                        bindings = <
-   &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
-   &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O  &none
-   &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
-                               &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
-                        >;
-                };
+    default_layer {
+      bindings = <
+ &none &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS    &none
+ &none &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O  &none
+ &none &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH    &none
+                             &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
+      >;
+    };
+:wq
+    symbols {
+      bindings = <
+ &none &none   &kp CARET   &kp GRAVE  &kp TILDE  &none       &none      &kp LT        &kp GT       &kp LBKT  &kp RBKT  &none
+ &none &kp AT  &kp HASH    &kp EXCL   &kp QMARK  &kp AMPS    &kp EQUAL  &kp LPAR      &kp RPAR  &kp LBRC  &kp RBRC  &none
+ &none &none   &none       &kp DLLR   &kp SEMI   &kp PIPE    &kp UNDER  &kp COLN      &none        &none     &none     &none
+                           &trans     &trans     &trans      &trans     &trans        &trans
+      >;
+    };
 
-                symbols {
-                        bindings = <
-   &none &none   &kp CARET   &kp GRAVE  &kp TILDE  &none       &none      &kp LT        &kp GT       &kp LBKT  &kp RBKT  &none
-   &none &kp AT  &kp HASH    &kp EXCL   &kp QMARK  &kp AMPS    &kp EQUAL  &kp LPAR      &kp RPAR  &kp LBRC  &kp RBRC  &none
-   &none &none   &none       &kp DLLR   &kp SEMI   &kp PIPE    &kp UNDER  &kp COLN      &none        &none     &none     &none
-                             &trans     &trans     &trans      &trans     &trans        &trans
-                        >;
-                };
+    navigation {
+      bindings = <
+ &none &kp PRCNT   &kp N7 &kp N8 &kp N9  &kp PLUS    &kp PG_UP  &kp HOME      &kp UP       &kp END    &kp PSCRN  &none
+ &none &kp KP_LPAR &kp N4 &kp N5 &kp N6  &kp DOT     &kp PG_DN  &kp LEFT      &kp DOWN     &kp RIGHT  &kp INS    &none
+ &none &kp KP_RPAR &kp N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none      &none
+                          &trans &kp N0  &trans      &trans     &trans        &trans
+      >;
+    };
 
-                navigation {
-                        bindings = <
-   &none &kp PRCNT   &kp N7 &kp N8 &kp N9  &kp PLUS    &kp PG_UP  &kp HOME      &kp UP       &kp END    &kp PSCRN  &none
-   &none &kp KP_LPAR &kp N4 &kp N5 &kp N6  &kp DOT     &kp PG_DN  &kp LEFT      &kp DOWN     &kp RIGHT  &kp INS    &none
-   &none &kp KP_RPAR &kp N1 &kp N2 &kp N3  &kp COMMA   &kp ASTRK  &kp FSLH      &kp PLUS     &kp MINUS  &none      &none
-                            &trans &kp N0  &trans      &trans     &trans        &trans
-                        >;
-                };
+    function {
+      bindings = <
+ &none &kp C_BRI_UP &kp N7 &kp F8 &kp F9  &kp F12    &kp PG_UP     &kp HOME      &kp UP     &kp END    &kp PSCRN    &none
+ &none &kp C_BRI_DN &kp F4 &kp F5 &kp F6  &kp F11    &kp PG_DN     &kp LEFT      &kp DOWN   &kp RIGHT  &kp INS      &none
+ &none &none        &kp F1 &kp F2 &kp F3  &kp F10    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_PP   &kp C_NEXT &kp C_PREV   &none
+                          &trans &trans  &trans      &trans        &trans        &trans
+      >;
+    };
 
-                function {
-                        bindings = <
-   &none &kp C_BRI_UP &kp N7 &kp F8 &kp F9  &kp F12    &kp PG_UP     &kp HOME      &kp UP     &kp END    &kp PSCRN    &none
-   &none &kp C_BRI_DN &kp F4 &kp F5 &kp F6  &kp F11    &kp PG_DN     &kp LEFT      &kp DOWN   &kp RIGHT  &kp INS      &none
-   &none &none        &kp F1 &kp F2 &kp F3  &kp F10    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_PP   &kp C_NEXT &kp C_PREV   &none
-                            &trans &trans  &trans      &trans        &trans        &trans
-                        >;
-                };
+    meta {
+      bindings = <
+ &none &bt BT_SEL 0 &bt BT_SEL 3 &none  &none  &bt BT_CLR         &none            &none    &none  &none  &none   &none
+ &none &bt BT_SEL 1 &bt BT_SEL 4 &none  &none  &none              &none            &none    &none  &none  &none  &none
+ &none &bt BT_SEL 2 &none        &none  &none  &ext_power EP_ON   &ext_power EP_ON &TOG LOK &none  &none  &none  &none
+                                 &trans &trans &trans             &trans           &trans   &trans
+      >;
+    };
 
-                meta {
-                        bindings = <
-   &none &bt BT_SEL 0 &bt BT_CLR &none  &none   &none      &none  &none  &none  &none &none   &none
-   &none &bt BT_SEL 1 &none      &none  &none   &none      &none  &none  &none  &none &none   &none
-   &none &bt BT_SEL 2 &none      &ext_power EP_ON  &none   &ext_power EP_ON  &none  &none  &none  &none &none   &none
-                                 &trans &trans  &trans     &trans &trans &trans
-                        >;
-                };
+    locked {
+      bindings = <
+ &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
+ &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
+ &none &none &none &none  &none  &none      &none  &none  &none  &none  &none   &none
+                   &none  &none  &none      &none  &none  &tog DEF
+      >;
+    };
 
-        };
+  };
 };
