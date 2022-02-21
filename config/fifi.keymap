@@ -38,7 +38,7 @@
  &kp Q      &kp W      &kp F       &kp P        &kp B      &kp J       &kp L         &kp U       &kp Y      &kp APOS
  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHIFT T &kp G      &kp M       &hm RSHIFT N  &hm RCTRL E &hm RALT I &hm RGUI O
  &kp Z      &kp X      &kp C       &kp D        &kp V      &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH
-                       &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &kp CARET
+                       &lt MET ESC &lt SYM TAB  &kp SPACE  &lt FUN RET &lt NAV BSPC  &lt MET
       >;
     };
 
