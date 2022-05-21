@@ -42,10 +42,10 @@
 //done
     default_layer { 
       bindings = <
- &kp Q      &kp W      &kp E       &kp R        &kp T      &kp Y       &kp U         &kp I       &kp O      &kp P
- &kp A      &kp S      &kp D       &kp F        &kp G      &kp H       &kp J         &kp K       &kp L      &kp SEMI
- &kp Z      &kp X      &kp C       &kp V        &kp B      &kp N       &kp M         &kp COMMA   &kp DOT    &kp FSLH
-                       &hn 5 0 &td0  &lt MOU SPACE  &lt NAV RET &kp BSPC  &to 1
+ &kp Q      &kp W      &kp E       &kp R        &kp T          &kp Y       &kp U         &kp I       &kp O      &kp P
+ &kp A      &kp S      &kp D       &kp F        &kp G          &kp H       &kp J         &kp K       &kp L      &kp SEMI
+ &kp Z      &kp X      &kp C       &kp V        &kp B          &kp N       &kp M         &kp COMMA   &kp DOT    &kp FSLH
+                       &hn 5 0     &td0         &lt MOU SPACE  &lt NAV RET &kp BSPC      &to 1
       >;
     };
 //done
@@ -54,7 +54,7 @@
  &kp Q      &kp W      &kp E       &kp R        &kp T      &kp Y       &kp U         &kp I       &kp O      &kp P
  &kp A      &kp S      &kp D       &kp F        &kp G      &kp H       &kp J         &kp K       &kp L      &kp RGUI
  &kp Z      &kp X      &kp C       &kp V        &kp B      &kp N       &kp M         &kp TAB     &kp DOT    &none
-              &to 0    &kp LCTRL   &kp LALT        &RSHIFT  &kp DEL  &to 2
+                       &to 0       &kp LCTRL    &kp LALT   &kp RSHIFT  &kp DEL       &to 2
       >;
     };
 //done
@@ -72,25 +72,25 @@
  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4      &none      &none     &kp UP   &none     &kp GRAVE
  &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN    &kp C_BRI_UP  &kp C_MUTE        &kp MINUS  &kp LEFT  &kp DOWN &kp RIGHT &kp SQT
  &bt BT_CLR    &none        &none           &none         &none             &none      &none     &none    &none     &none
-              &none  &kp LCTRL  &kp LSHIFT       &none  &none  &none
+                            &none           &kp LCTRL     &kp LSHIFT        &none      &none     &none
       >;
     };
 //done missing mouse keys
     mouse_layer {
       bindings = <
- &none  &none &none     &none  &none          &none      &none  &none    &none &kp GRAVE
- &none  &none &none     &none  &none          &kp MINUS  &none  &none    &none &kp SQT
- &none  &none &none     &none  &none          &none      &none  &kp RGUI &none &kp EXCL
-              &none  &kp LSHIFT  &none        &kp RSHIFT  &none  &none
+ &none  &none &none     &none       &none          &none       &none  &none    &none &kp GRAVE
+ &none  &none &none     &none       &none          &kp MINUS   &none  &none    &none &kp SQT
+ &none  &none &none     &none       &none          &none       &none  &kp RGUI &none &kp EXCL
+              &none     &kp LSHIFT  &none          &kp RSHIFT  &none  &none
       >;
     };
 //done
     number_layer {
       bindings = <
- &kp F1   &kp F2  &kp F3     &kp F4     &kp F5        &kp F5     &kp F7     &kp F8   &kp F9   &kp F10
- &kp N1   &kp N2  &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8   &kp N9   &kp N0
- &kp F11  &kp F12 &kp ESC    &kp PSCRN  &none         &kp EQUAL  &kp MINUS  &kp BSLH &kp LBKT &kp RBKT
-              &none  &none  &none        &kp RSHIFT  &none  &none
+ &kp F1   &kp F2  &kp F3     &kp F4     &kp F5        &kp F5      &kp F7     &kp F8   &kp F9   &kp F10
+ &kp N1   &kp N2  &kp N3     &kp N4     &kp N5        &kp N6      &kp N7     &kp N8   &kp N9   &kp N0
+ &kp F11  &kp F12 &kp ESC    &kp PSCRN  &none         &kp EQUAL   &kp MINUS  &kp BSLH &kp LBKT &kp RBKT
+                  &none      &none      &none         &kp RSHIFT  &none      &none
       >;
     };
 
