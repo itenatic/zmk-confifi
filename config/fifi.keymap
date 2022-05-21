@@ -53,23 +53,23 @@
       bindings = <
  &kp Q      &kp W      &kp E       &kp R        &kp T      &kp Y       &kp U         &kp I       &kp O      &kp P
  &kp A      &kp S      &kp D       &kp F        &kp G      &kp H       &kp J         &kp K       &kp L      &kp RGUI
- &kp Z      &kp X      &kp C       &kp V        &kp B      &kp N       &kp M         &kp TAB   &kp DOT    &none
+ &kp Z      &kp X      &kp C       &kp V        &kp B      &kp N       &kp M         &kp TAB   &kp DOT      &none
               &to 0  &kp LCTRL  &kp LALT        &RSHIFT  &kp DEL  &to 2
       >;
     };
 //done
     numpad {
       bindings = <
- &none  &none &none     &none  &none        &none  &kp N7  &kp N8 &kp N9 &kp MINUS
+ &none  &none &none     &none  &none        &none    &kp N7  &kp N8 &kp N9 &kp MINUS
  &none  &none &none     &none  &none        &kp DOT  &kp N4  &kp N5 &kp N6 &kp EQUAL
- &none  &none &none     &none  &none        &kp NO  &kp N1  &kp N2 &kp N3 &kp FSLH
+ &none  &none &none     &none  &none        &kp NO   &kp N1  &kp N2 &kp N3 &kp FSLH
               &to 0  &kp SPACE  &kp LSHIFT        &kp RET  &kp BSPC  &none
       >;
     };
 //done
     arrows {
       bindings = <
- &none  &none &none     &none  &none        &none  &none  &kp UP &none &kp GRAVE
+ &none         &none        &none           &none         &none             &none      &none     &kp UP   &none     &kp GRAVE
  &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN    &kp C_BRI_UP  &kp C_MUTE        &kp MINUS  &kp LEFT  &kp DOWN &kp RIGHT &kp SQT
  &none  &none &none     &none  &none        &none  &none  &none &none &none
               &none  &kp LCTRL  &kp LSHIFT       &none  &none  &none
@@ -89,8 +89,8 @@
       bindings = <
  &kp F1  &kp F2 &kp F3     &kp F4  &kp F5        &kp F5  &kp F7  &kp F8 &kp F9 &kp F10
  &kp N1  &kp N2 &kp N3     &kp N4  &kp N5        &kp N6  &kp N7  &kp N8 &kp N9 &kp N0
- &kp F11  &kp F12 &esc     &prsc  &none        &kp EQUAL  &kp MINUS  &BSLH &kp LBKT &kp RBKT
-              &none  &kp ESC  &kp PSCRN        &kp RSHIFT  &none  &none
+ &kp F11  &kp F12 &kp ESC     &kp PSCRN  &none        &kp EQUAL  &kp MINUS  &BSLH &kp LBKT &kp RBKT
+              &none  &none  &none        &kp RSHIFT  &none  &none
       >;
     };
 
