@@ -42,9 +42,9 @@
 //done
     default_layer { 
       bindings = <
- &kp Q      &kp W      &kp F       &kp P        &kp G          &kp J       &kp L         &kp U       &kp Y      &kp SEMI
- &kp A      &kp R      &kp S       &kp T        &kp D          &kp H       &kp N         &kp E       &kp I      &kp O
- &kp Z      &kp X      &kp C       &kp V        &kp B          &kp K       &kp M         &kp COMMA   &kp DOT    &mt LCTRL FSLH
+ &mt LCTRL Q &kp W      &kp F       &kp P        &kp G          &kp J       &kp L         &kp U       &kp Y      &mt RCTRL SEMI
+ &kp A       &kp R      &kp S       &kp T        &kp D          &kp H       &kp N         &kp E       &kp I      &kp O
+ &kp Z       &kp X      &kp C       &kp V        &kp B          &kp K       &kp M         &kp COMMA   &kp DOT    &mt RALT FSLH
                        &hn 5 0     &kp LSHIFT   &lt MOU SPACE  &lt NAV RET &kp BSPC      &to 1
       >;
     };
